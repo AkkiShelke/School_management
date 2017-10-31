@@ -1,0 +1,217 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>शाळा</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/angular/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+    </head>
+
+    <body ng-app="mainApp">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+<!--              <a class="navbar-brand" href="#">Cyber Code Consolidate</a>-->
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+<!--
+              <ul class="nav navbar-nav">
+                <li ><a href="/">Home</a></li>
+
+                <li><a href="/aboutUs">About Us</a></li>
+              </ul>
+-->
+              <ul class="nav navbar-nav navbar-right">
+                <li><a  href="#/register"><span class="fa fa-user"></span> नोंदणी करा</a></li>
+                <li><a class="active"  href="#/login"><span class="fa fa-sign-in"></span> लॉगइन</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!--  -->
+        <div class="center-block">
+    <div class="col-sm-6 col-sm-offset-3">
+        <div class="panel panel-primary">
+            <div class="panel-heading">नोंदणी</div>
+            <form class=" panel-body" name="loginForm">
+
+                <!-- School Name: -->
+                <div class="form-group">
+                    <div class="form-group">
+                        <label>शाळेचे नाव:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-university"></i></span>
+                            <input class="form-control" type="text" name="School_Name" placeholder="Please enter Shool-Name" >
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- School Id: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>स्कूल आईडी:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
+                                    <input class="form-control" type="text" name="school-id" placeholder="Please enter school-id" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Email Id: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>ईमेल आयडी:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                    <input class="form-control" type="text" name="email-id" placeholder="Please enter Email-id" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Year Of Registration: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>नोंदणीचे वर्ष:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input class="form-control" type="text" name="registration" placeholder="Please enter Year of Registration" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6">
+
+                        <!-- Contact No: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>संपर्क क्रमांक:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                    <input class="form-control" type="text" name="contact" placeholder="Please enter Contact No" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- City: -->
+                        <div class="form-group">
+                            <label>शहर:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <select class="form-control"   id="sel1">
+                                    <option>पुणे</option>
+                                    <option>लातूर</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Location -->
+                        <div class="form-group">
+                            <label for="sel1">स्थान:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <select class="form-control"   id="sel1">
+                                    <option>शिवनी</option>
+                                    <option>तुपडी</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Password: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>पासवर्ड:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                    <input class="form-control" type="password" name="password" placeholder="Please enter password"  >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Confirm Password: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>पासवर्ड पुष्टी:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                    <input class="form-control" type="password" name="comfirm password" placeholder="Please renter password"  >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                       <a href="#/login"><button class="btn btn-primary" href="login.html" type="submit">नोंदणी</button>  </a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+        <!--  -->
+        <!-- Main Angular Files -->
+        <script src="assets/plugins/angular/js/angular.js"></script>
+        <script src="assets/plugins/angular/js/angular-route.js"></script>
+        <script src="assets/plugins/angular/js/angular-animate.js"></script>
+
+        <!-- Angular Config/Routes -->
+        <script src="main.js"></script>
+
+        <!-- JS link -->
+        <script src="assets/plugins/jquery/jquery.min.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

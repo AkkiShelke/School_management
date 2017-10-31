@@ -1,0 +1,654 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">शिक्षक परिचय</div>
+    <form class=" panel-body">
+        <div class="row">
+
+            <div class="col-sm-8 col-sm-offset-2">
+            <div class="content-wrapper" ng-controller="teacherController">
+            <div class="everyone-wrapper">
+                <section ng-switch on="(editIndex == $index)" ng-repeat="person in teacherArray track by $index" class="clearfix">
+                <div class="info-wrapper clearfix">
+
+
+
+                    <div ng-switch-default >
+
+
+                     <div class="row">
+                    <div class="col-sm-6">
+
+                    <!-- Teacher Id: -->
+
+                    <div class="form-group">
+                        <i class="fa fa-id-badge"></i>
+                        <label>शिक्षक आयडी:</label>
+                        <span type="text"> {{person.teacherId}}</span>
+                    </div>
+
+                    </div>
+
+                <div class="col-sm-6">
+
+                      <!-- Adhaar Number: -->
+
+                    <div class="form-group">
+                        <i class="fa fa-address-card "></i>
+                        <label>आधार क्रमांक:</label>
+                        <span type="text"> {{person.adhaarNumber}}</span>
+                    </div>
+                </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- First Name: -->
+                        <div class="form-group">
+                            <i class="fa fa-user "></i>
+                            <label>नाव:</label>
+                            <span type="text"> {{person.firstName}}</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                            <!-- Middle Name: -->
+                      <div class="form-group">
+                            <i class="fa fa-user "></i>
+                            <label>वडिलांचे नाव:</label>
+                            <span type="text"> {{person.middleName}}</span>
+                        </div>
+                    </div>
+                        </div>
+                        <div class="row">
+                    <div class="col-sm-6">
+
+                            <!-- Last Name: -->
+                       <div class="form-group">
+                            <i class="fa fa-user "></i>
+                            <label>आडनाव:</label>
+                            <span type="text"> {{person.lastName}}</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                   <div class="row">
+                    <div class="col-sm-6">
+
+                         <!-- Education: -->
+                            <div class="form-group">
+                            <i class="fa fa-university "></i>
+                            <label>शिक्षण:</label>
+                            <span type="text"> {{person.education}}</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Specialty: -->
+                <div class="form-group">
+                            <i class="fa fa-book "></i>
+                            <label>कौशल्य(विषय):</label>
+                            <span type="text"> {{person.specialty}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+
+                         <!-- Email Id: -->
+
+                          <div class="form-group">
+                            <i class="fa fa-envelope "></i>
+                            <label>ईमेल:</label>
+                            <span type="text"> {{person.emailId}}</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-sm-6">
+
+                        <!-- Contact No: -->
+                         <div class="form-group">
+                            <i class="fa fa-phone "></i>
+                            <label>संपर्क:</label>
+                            <span type="text"> {{person.contactNo}}</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                         <!-- D.O.B: -->
+                         <div class="form-group">
+                            <i class="fa fa-calendar "></i>
+                            <label>जन्म तारीख:</label>
+                            <span type="text"> {{person.birth}}</span>
+                        </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <!-- Gender: -->
+
+                           <div class="form-group">
+                            <i class="fa fa-calendar "></i>
+                            <label>लिंग:</label>
+                            <span type="text"> {{person.gender}}</span>
+                        </div>
+                        </div>
+                    </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Mothers Name: -->
+                          <div class="form-group">
+                            <i class="fa fa-user "></i>
+                            <label>आईचे नाव:</label>
+                            <span type="text"> {{person.mothersName}}</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Mother-Tongue: -->
+                         <div class="form-group">
+                            <i class="fa fa-user "></i>
+                            <label>मातृभाषा:</label>
+                            <span type="text"> {{person.motherTongue}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Religion: -->
+                        <div class="form-group">
+                            <i class="fa fa-user "></i>
+                            <label>धर्म:</label>
+                            <span type="text"> {{person.religion}}</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Birth Place: -->
+                         <div class="form-group">
+                            <i class="fa fa-map-marker "></i>
+                            <label>जन्मस्थान:</label>
+                            <span type="text"> {{person.birthPlace}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Joining Date: -->
+                      <div class="form-group">
+                            <i class="fa fa-calendar "></i>
+                            <label>प्रवेष दिनांक:</label>
+                            <span type="text"> {{person.joiningDate}}</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+
+                        <!-- Previous School: -->
+                         <div class="form-group">
+                            <i class="fa fa-university "></i>
+                            <label>पूर्वीच्या शाळेचे नाव:</label>
+                            <span type="text"> {{person.previousSchool}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Mobile: -->
+                         <div class="form-group">
+                            <i class="fa fa-mobile"></i>
+                            <label>मोबाइल नंबर:</label>
+                            <span type="text"> {{person.mobile}}</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Address: -->
+                         <div class="form-group">
+                            <i class="fa fa-map-marker"></i>
+                            <label>पत्ता:</label>
+                            <span type="text"> {{person.address}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                  <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- City(District): -->
+                         <div class="form-group">
+                            <i class="fa fa-map-marker"></i>
+                            <label>शहर(जिल्हा):</label>
+                            <span type="text"> {{person.cityDistrict}}</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Taluka: -->
+                        <div class="form-group">
+                            <i class="fa fa-map-marker"></i>
+                            <label>तालुका:</label>
+                            <span type="text"> {{person.taluka}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                  <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Location: -->
+                        <div class="form-group">
+                            <i class="fa fa-map-marker"></i>
+                            <label>राहण्याचे ठिकाण:</label>
+                            <span type="text"> {{person.location}}</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Pin code: -->
+                        <div class="form-group">
+                            <i class="fa fa-map-marker"></i>
+                            <label>पिन कोड:</label>
+                            <span type="text"> {{person.pinCode}}</span>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+
+                    <div ng-switch-when="true">
+                        <div class="row">
+                            <div class="col-sm-6">
+
+                    <!-- Teacher Id: -->
+                    <div class="form-group">
+                    <div class="form-group">
+                        <label>शिक्षक आयडी:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
+                            <input class="form-control" type="text" ng-model="editObject.teacherId" placeholder="शिक्षक आयडी" >
+                        </div>
+                    </div>
+                </div>
+                    </div>
+
+                <div class="col-sm-6">
+
+                      <!-- Adhaar Number: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>आधार क्रमांक:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-address-card "></i></span>
+                                    <input class="form-control" type="text" ng-model="editObject.adhaarNumber" placeholder="आधार क्रमांक" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+
+
+
+                <div class="row">
+                    <div class="col-sm-4">
+
+                        <!-- First Name: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>नाव:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input class="form-control" type="text" ng-model="editObject.firstName" placeholder="नाव" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+
+                            <!-- Middle Name: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>वडिलांचे नाव:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input class="form-control" type="text" ng-model="editObject.middleName" placeholder="वडिलांचे नाव" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+
+                            <!-- Last Name: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>आडनाव:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input class="form-control" type="text" ng-model="editObject.lastName" placeholder="आडनाव" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                   <div class="row">
+                    <div class="col-sm-6">
+
+                         <!-- Education: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>शिक्षण:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-graduation-cap"></i></span>
+                                    <select class="form-control" ng-model="editObject.education"  id="sel1">
+                                        <option style="color: #ccc" selected disabled>शिक्षण</option>
+                                        <option>BEd</option>
+                                        <option>DEd</option>
+                                        <option>MEd</option>
+                                        <option>MA</option>
+                                        <option>BA</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Specialty: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>कौशल्य(विषय):</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-book"></i></span>
+                                    <select class="form-control " ng-model="editObject.specialty"  id="sel1">
+                                         <option style="color: #ccc" selected disabled>कौशल्य(विषय)</option>
+                                        <option>मराठी</option>
+                                        <option>हिंदी</option>
+                                        <option>इंग्रजी</option>
+                                        <option>गणित</option>
+                                        <option>संस्कृत</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+
+                         <!-- Email Id: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>ईमेल:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                    <input class="form-control" type="text" ng-model="editObject.emailId" placeholder="ईमेल" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6">
+
+                        <!-- Contact No: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>संपर्क:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                    <input class="form-control" type="text" ng-model="editObject.contactNo" placeholder="संपर्क" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                         <!-- D.O.B: -->
+                        <div class="form-group">
+                            <label>जन्म तारीख:</label>
+                                <div class="input-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input class="form-control"  type="date" ng-model="editObject.birth" name="input" ng- placeholder="yyyy-MM-dd" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <label class="control-label">लिंग</label><br>
+
+                            <div class="btn-group genderButtons" data-toggle="buttons">
+
+                                <label class="btn btn-md btn-success">पुरुष
+                                    <input type="radio" name="childGender" id="male" autocomplete="off">
+                                    <span class="fa fa-check"></span>
+                                </label>
+
+                               <label class="btn btn-md btn-primary">स्त्री
+                                   <input type="radio" name="childGender" id="female" autocomplete="off">
+                                   <span class="fa fa-check"></span>
+                               </label>
+
+                               <label class="btn btn-md btn-info">इतर
+                                   <input type="radio" name="childGender" id="other" autocomplete="off">
+                                   <span class="fa fa-check"></span>
+                               </label>
+                           </div>
+                        </div>
+                    </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Mothers Name: -->
+                        <div class="form-group">
+                            <label>आईचे नाव:</label>
+                           <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input class="form-control" type="text" ng-model="editObject.mothersName" placeholder="आईचे नाव" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Mother-Tongue : -->
+                        <div class="form-group">
+                            <label for="sel1">मातृभाषा:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-comments"></i></span>
+                                <select class="form-control"  ng-model="editObject.motherTongue" id="sel1">
+                                       <option>मराठी</option>
+                                    <option>हिंदी</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Religion: -->
+                        <div class="form-group">
+                            <label>धर्म:</label>
+                           <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input class="form-control" type="text" ng-model="editObject.religion" placeholder="धर्म" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Birth Place: -->
+                        <div class="form-group">
+                            <label for="sel1">जन्मस्थान:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input class="form-control" type="text" ng-model="editObject.birthPlace" placeholder="जन्मस्थान" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Joining Date: -->
+                        <div class="form-group">
+                            <label for="sel1">प्रवेष दिनांक:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                <input class="form-control"  type="date" ng-model="editObject.joiningDate" name="input" ng-model="example.value" placeholder="yyyy-MM-dd" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+
+                        <!-- Previous School: -->
+                        <div class="form-group">
+                            <label for="sel1">पूर्वीच्या शाळेचे नाव:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-university"></i></span>
+                                <input class="form-control" type="text" ng-model="editObject.previousSchool" placeholder="पूर्वीच्या शाळेचे नाव" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="row">
+                    <div class="col-sm-6">
+
+
+                        <!-- Mobile: -->
+                        <div class="form-group">
+                            <label>मोबाइल नंबर :</label>
+                           <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+                                <input class="form-control" type="text" ng-model="editObject.mobile" placeholder="मोबाइल नंबर " >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Address: -->
+                        <div class="form-group">
+                            <label for="sel1">पत्ता:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input class="form-control" type="text" ng-model="editObject.address" placeholder="पत्ता" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                  <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- City(District): -->
+                        <div class="form-group">
+                            <label>शहर(जिल्हा):</label>
+                           <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input class="form-control" type="text" ng-model="editObject.cityDistrict" placeholder="शहर(जिल्हा)" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Taluka: -->
+                        <div class="form-group">
+                            <label for="sel1">तालुका:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input class="form-control" type="text" ng-model="editObject.taluka" placeholder="तालुका" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                  <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Location: -->
+                        <div class="form-group">
+                            <label>राहण्याचे ठिकाण:</label>
+                           <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input class="form-control" type="text" ng-model="editObject.location" placeholder="राहण्याचे ठिकाण" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Pin code: -->
+                        <div class="form-group">
+                            <label for="sel1">पिन कोड:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input class="form-control" type="text" ng-model="editObject.pinCode" placeholder="पिन कोड" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    <div class="edit-wrapper clearfix">
+                    <button class="btn btn-warning" ng-switch-default ng-click="editingPerson($index)"><span class="glyphicon glyphicon-edit" ></span>Edit</button>
+                    <button class="btn btn-warning" ng-switch-when="true" ng-click="saveEdit($index)">save</button>
+                    <button class="btn btn-danger" ng-switch-when="true" ng-click="cancelEdit()">X</button>
+
+                    </div>
+                </div>
+
+                </section>
+
+            </div>
+
+            </div>
+
+        </div>
+
+
+        </div>
+
+    </form>
+
+</div>
+

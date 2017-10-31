@@ -1,0 +1,268 @@
+/* ---------------------------------------------------
+   NAVBAR & FONT START
+----------------------------------------------------- */
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family:  sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+@media print {
+    .container-fluid {
+        display: inline;
+    }
+}
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+i, span {
+    display: inline-block;
+}
+/* ---------------------------------------------------
+   END NAVBAR & FONT START
+----------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------
+        DIV IN CENTER CSS
+----------------------------------------------------- */
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ---------------------------------------------------
+        END DIV
+----------------------------------------------------- */
+/* ---------------------------------------------------
+        MARATHI FONT
+----------------------------------------------------- */
+
+
+     /*
+@font-face
+{
+   font-family: Marathi;
+   src: url("../plugins/marathi_font/Marathi_Lekhani.eot")
+}
+@font-face
+{
+   font-family: Marathi;
+   src: url("../plugins/marathi_font/Marathi_Lekhani.ttf")
+}
+
+
+.txt {
+   font-family: Marathi;
+}
+*/
+/* ---------------------------------------------------
+        END MARATHI FONT
+----------------------------------------------------- */
+/* ---------------------------------------------------
+        DASHBOARD COLOR CSS
+----------------------------------------------------- */
+
+.quick-button.metro {
+    position: relative;
+    color: #fff;
+/*    text-shadow: 0 1px 1px rgba(0, 0, 0, .25);*/
+    filter: none;
+    padding: 30px 10px 0px 10px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+
+}
+
+.quick-button {
+    border: 1px solid #ddd;
+    margin-bottom: -1px;
+    padding: 30px 0px 10px 0px;
+    font-size: 14px;
+    background-color: #fafafa;
+    background-image: -moz-linear-gradient(top, #fafafa, #efefef);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#efefef));
+    background-image: -webkit-linear-gradient(top, #fafafa, #efefef);
+    background-image: -o-linear-gradient(top, #fafafa, #efefef);
+    background-image: linear-gradient(to bottom, #fafafa, #efefef);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fafafa', endColorstr='#efefef', GradientType=0);
+    -webkit-box-shadow: 0 1px 0px rgba(255, 255, 255, .8);
+    -moz-box-shadow: 0 1px 0px rgba(255, 255, 255, .8);
+    box-shadow: 0 1px 0px rgba(255, 255, 255, .8);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    display: block;
+/*    color: #646464;*/
+/*    text-shadow: 0 1px 0px rgba(255, 255, 255, .6);*/
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.pink,
+.pink [class="box-header"],
+.pink.box,
+.slider.pink .ui-slider-range,
+.progress.pink .ui-progressbar-value,
+.sliderVertical.pink .ui-slider-range,
+.progressSlim.pink .ui-progressbar-value {
+	background: #9F00A7 !important;
+	border-color: #9F00A7 !important;
+	color: #fff;
+}
+
+
+.blue,
+.blue [class="box-header"],
+.blue.box,
+.slider.blue .ui-slider-range,
+.progress.blue .ui-progressbar-value,
+.sliderVertical.blue .ui-slider-range,
+.progressSlim.blue .ui-progressbar-value,
+.label-info,
+.badge-info {
+	background: #2D89EF !important;
+	border-color: #2D89EF !important;
+	color: #fff;
+}
+
+.red,
+.red [class="box-header"],
+.red.box,
+.slider.red .ui-slider-range,
+.progress.red .ui-progressbar-value,
+.sliderVertical.red .ui-slider-range,
+.progressSlim.red .ui-progressbar-value,
+.label-important,
+.badge-important {
+	background: #EB3C00 !important;
+	border-color: #EB3C00 !important;
+	color: #fff;
+}
+
+.green,
+.green [class="box-header"],
+.green.box,
+.slider.green .ui-slider-range,
+.progress.green .ui-progressbar-value,
+.sliderVertical.green .ui-slider-range,
+.progressSlim.green .ui-progressbar-value,
+.label-success,
+.badge-success {
+	background: #00A300 !important;
+	border-color: #00A300 !important;
+	color: #fff;
+}
+
+
+.black,
+.black [class="box-header"],
+.black.box,
+.slider.black .ui-slider-range,
+.progress.black .ui-progressbar-value
+.sliderVertical.black .ui-slider-range,
+.progressSlim.black .ui-progressbar-value {
+	background: #222 !important;
+	border-color: #222 !important;
+	color: #fff;
+}
+
+.cornflowerbluehsl{
+      color: #fff;
+    background: #7386D5;
+}
+.powderblue{
+    background: #dfe2db;
+}
+.powderblue1{
+    background: #f3f9fe;
+}
+
+.card-primary {
+  background: #7460ee;
+  border-color: #7460ee; }
+.tomato{
+    background: rgb(255,84,99);
+  border-color: rgb(255,84,99);
+}
+.silver {
+  background: rgb(209,206,170);
+  border-color: rgb(209,206,170);
+}
+.card-success {
+    background: #26c6da;
+    border-color: #26c6da;
+}
+/* ---------------------------------------------------
+        END DASHBOARD CSS
+----------------------------------------------------- */
+/* ---------------------------------------------------
+        Gender CSS
+----------------------------------------------------- */
+.btn span.fa {
+   opacity: 0;
+}
+.btn.active span.fa {
+   opacity: 1;
+}
+/* ---------------------------------------------------
+        END Gender CSS
+----------------------------------------------------- */
+
+/* ---------------------------------------------------
+        TEXT COLOR CSS
+----------------------------------------------------- */
+.white_color{
+    color: white;
+    text-align: center;
+
+}
+.black_color{
+    color:black;
+}
+/* ---------------------------------------------------
+        END TEXT COLOR CSS
+----------------------------------------------------- */

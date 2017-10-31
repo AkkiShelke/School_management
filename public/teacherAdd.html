@@ -1,0 +1,365 @@
+<div class="row" >
+    <div class="col-sm-7 col-sm-offset-2">
+        <div class="panel panel-primary">
+            <div class="panel-heading">शिक्षक नोंदणी</div>
+            <form class=" panel-body" name="loginForm">
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                    <!-- Teacher Id: -->
+                    <div class="form-group">
+                    <div class="form-group">
+                        <label>शिक्षक आयडी:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
+                            <input class="form-control" type="text" name="TeacherId" placeholder="शिक्षक आयडी" >
+                        </div>
+                    </div>
+                </div>
+                    </div>
+
+                <div class="col-sm-6">
+
+                      <!-- Adhaar Number: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>आधार क्रमांक:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-address-card "></i></span>
+                                    <input class="form-control" type="text" name="adhaarNumber" placeholder="आधार क्रमांक" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+
+                        <!-- First Name: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>नाव:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input class="form-control" type="text"  placeholder="नाव" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+
+                            <!-- Middle Name: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>वडिलांचे नाव:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input class="form-control" type="text" placeholder="वडिलांचे नाव:" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+
+                            <!-- Last Name: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>आडनाव:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input class="form-control" type="text" placeholder="आडनाव" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                   <div class="row">
+                    <div class="col-sm-6">
+
+                         <!-- Education: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>शिक्षण:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-graduation-cap"></i></span>
+                                    <select class="form-control"   id="sel1">
+                                        <option style="color: #ccc" selected disabled>शिक्षण</option>
+                                        <option>BEd</option>
+                                        <option>DEd</option>
+                                        <option>MEd</option>
+                                        <option>MA</option>
+                                        <option>BA</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Specialty: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>कौशल्य(विषय):</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-book"></i></span>
+                                    <select class="form-control "  id="sel1">
+                                        <option style="color: #ccc" selected disabled>कौशल्य(विषय)</option>
+                                        <option>मराठी</option>
+                                        <option>हिंदी</option>
+                                        <option>इंग्रजी</option>
+                                        <option>गणित</option>
+                                        <option>संस्कृत</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+
+                         <!-- Email Id: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>ईमेल:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                    <input class="form-control" type="text" name="email-id" placeholder="ईमेल" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6">
+
+                        <!-- Contact No: -->
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>संपर्क:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                    <input class="form-control" type="text" name="contact" placeholder="संपर्क क्रमांक" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                         <!-- D.O.B: -->
+                        <div class="form-group">
+                            <label>जन्म तारीख:</label>
+                                <div class="input-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input class="form-control"  type="date" id="exampleInput" name="input" ng-model="example.value" placeholder="जन्म तारीख" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <label class="control-label">लिंग</label><br>
+
+                            <div class="btn-group genderButtons" data-toggle="buttons">
+
+                                <label class="btn btn-md btn-success">पुरुष
+                                    <input type="radio" name="childGender" id="male" autocomplete="off">
+                                    <span class="fa fa-check"></span>
+                                </label>
+
+                               <label class="btn btn-md btn-primary">स्त्री
+                                   <input type="radio" name="childGender" id="female" autocomplete="off">
+                                   <span class="fa fa-check"></span>
+                               </label>
+
+                               <label class="btn btn-md btn-info">इतर
+                                   <input type="radio" name="childGender" id="other" autocomplete="off">
+                                   <span class="fa fa-check"></span>
+                               </label>
+                           </div>
+                        </div>
+                    </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Mothers Name: -->
+                        <div class="form-group">
+                            <label>आईचे नाव:</label>
+                           <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input class="form-control" type="text"  placeholder="आईचे नाव" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Mother-Tongue: -->
+                        <div class="form-group">
+                            <label for="sel1">मातृभाषा:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-comments"></i></span>
+                                <select class="form-control"   id="sel1">
+                                    <option>मराठी</option>
+                                    <option>हिंदी</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Religion: -->
+                        <div class="form-group">
+                            <label>धर्म:</label>
+                           <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input class="form-control" type="text" placeholder="धर्म" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Birth Place: -->
+                        <div class="form-group">
+                            <label for="sel1">जन्मस्थान:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input class="form-control" type="text"  placeholder="Birth Place" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Joining Date: -->
+                        <div class="form-group">
+                            <label for="sel1">प्रवेष दिनांक:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                <input class="form-control"  type="date" id="exampleInput" name="input" ng-model="example.value" placeholder="yyyy-MM-dd" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+
+                        <!-- Previous School: -->
+                        <div class="form-group">
+                            <label for="sel1">पूर्वीच्या शाळेचे नाव:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-university"></i></span>
+                                <input class="form-control" type="text"  placeholder="पूर्वीच्या शाळेचे नाव" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Mobile: -->
+                        <div class="form-group">
+                            <label>मोबाइल नंबर:</label>
+                           <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+                                <input class="form-control" type="text" placeholder="मोबाइल नंबर" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Address: -->
+                        <div class="form-group">
+                            <label for="sel1">पत्ता:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input class="form-control" type="text" placeholder="पत्ता" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                  <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- City(District): -->
+                        <div class="form-group">
+                            <label>शहर(जिल्हा):</label>
+                           <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input class="form-control" type="text" placeholder="शहर(जिल्हा)" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Taluka: -->
+                        <div class="form-group">
+                            <label for="sel1">तालुका:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input class="form-control" type="text" placeholder="तालुका" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                  <div class="row">
+                    <div class="col-sm-6">
+
+                        <!-- Location: -->
+                        <div class="form-group">
+                            <label>राहण्याचे ठिकाण:</label>
+                           <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input class="form-control" type="text"  placeholder="राहण्याचे ठिकाण" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <!-- Pin code: -->
+                        <div class="form-group">
+                            <label for="sel1">पिन कोड:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input class="form-control" type="text" placeholder="पिन कोड" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                       <a href="#/login"><button class="btn btn-primary" href="login.html" type="submit">नोंदणी</button></a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

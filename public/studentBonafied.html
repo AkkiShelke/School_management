@@ -1,0 +1,113 @@
+<div class="row container-fluid powderblue marathi" ng-controller="studentController">
+    <div class="col-sm-11" style="margin-left: 40px;" >
+        <div class="content-wrapper"  >
+            <div class="everyone-wrapper" >
+                <section ng-switch on="(editIndex == $index)" ng-repeat="person in studentArray track by $index" class="clearfix">
+                    <div class="info-wrapper clearfix">
+                        <div class="row" style="padding-top: 5px;">
+                            <div class="edit-wrapper clearfix">
+                                <div class="pull-left">
+                                    <span>विद्यार्थी परिचय:</span>
+                                </div>
+
+                                <div class="pull-right" >
+                                    <a class="btn btn-warning" pdf-save-button="idOne" pdf-name="someone.pdf" class="btn">Print</a>
+                                    <a href="#/studentTC"  class="btn btn-success">
+                                        <i class="fa fa-print"> टी.सी.</i>
+                                    </a>
+                                    <a href="#/studentBonafied" class="btn btn-success">
+                                        <i class="fa fa-print"> बोनफिड</i>
+                                    </a>
+                                    <a class="btn btn-success">
+                                        <i class="fa fa-print"> इतर</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="panel panel-default container-fluid" pdf-save-content="idOne">
+                            <div class="panel-heading ">
+                                <div class="row">
+                                    <div class="col-sm-2 text-center">
+                                        <img src="assets/images/zp_logo.JPG" style="width:100px;height:100px;">
+                                    </div>
+
+                                    <div class="col-sm-8">
+                                        <h3 class="text-center">महाराष्ट्र शिक्षण मंडळ </h3>
+                                        <h4 class="text-center">जिल्हा परिषद शाळा शिवनी कोतल </h4>
+                                        <h5 class="text-center">पुला जवळ </h5>
+                                    </div>
+                                    <div class="col-sm-2 pull-right">
+                                        <span>Reg no:-</span><span>००००१</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+                                <br>
+                                <div ng-switch-default  >
+                                     <div class="row">
+                                          <div class="col-sm-1 col-sm-offset-11 pull-right">
+                                              <div class="pull-right" ng-controller="AppCtrl">
+<!--                                                {{date | date:'dd-MM-yyyy'}} -->
+                                                  <input type="date" data-date-format="dd/mm/yy" min-value="date"/>
+                                                  <datepicker date-format="dd-MM-yyyy" selector="form-control" date-min-limit="{{minDate}}">
+
+                                                  </datepicker>
+
+                                                </div>
+                                            </div>
+
+
+                                         </div>
+                                    <form>
+
+                                    <fieldset>
+                                        <legend align="center"><h1>BONAFIDE CERTIFICATE</h1></legend>
+
+                                        <br>
+                                        <br>
+                                        <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+                                    <strong>
+                                    It is certify that Mr./ Ms. <span type="text"> {{person.firstName}} {{person.middleName}} {{person.lastName}}</span>  S/D of Shri <span type="text">{{person.middleName}} {{person.lastName}}</span>
+                                        is bonafide student of this Institute under Year S.S.C. Course.
+                                        He/She is now in <span>{{person.currentClass}}</span> in
+                                        Academic Year <span>{{person.currentAcadmicYear}}</span>
+
+
+                                        <br>
+                                        <br>
+                                        This certificate is issued on the request of the student.
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <div class="pull-right" ><u><strong>signature of the principal (with stamp)</strong></u>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        </strong>
+                                    </div>
+                                            </div>
+
+                                    </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+

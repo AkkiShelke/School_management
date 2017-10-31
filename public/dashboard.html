@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="mr">
+    <head>
+        <title>Project</title>
+        <meta charset="utf-8">
+        <meta content="mr_IN.UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+        <script type="text/javascript" src="http://odb.outbrain.com/utils/get?url=http%3A%2F%2Fwww.marathimati.com%2Fentertainment%2Fmovies%2F&amp;settings=true&amp;recs=true&amp;widgetJSId=TF_2&amp;key=NANOWDGT01&amp;idx=1&amp;version=01002044&amp;ref=http%3A%2F%2Fwww.marathimati.com%2Fcontact%2F&amp;apv=true&amp;sig=1HobaBBG&amp;format=html&amp;rand=86724&amp;lsd=0b2ac369-e795-4b24-8af0-642251853d88&amp;t=MV80MjNmMWEzMTI1MjFlYzdmZTU0YzVmNjFjZTAxNWFkM18w&amp;winW=751&amp;winH=618&amp;adblck=false" charset="UTF-8" async=""></script>
+
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/angular/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="assets/plugins/jquery/jquery.dataTables.min.css" />
+
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/css/sidebar.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/table.css">
+
+       <!-- Java Script link -->
+        <script src="assets/plugins/jquery/jquery.min.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/plugins/jquery/jquery.dataTables.min.js"></script>
+
+          <script src="assets/js/jspdf.debug.js"></script>
+        <script src="assets/js/html2canvas.min.js"></script>
+
+
+        <!-- Main Angular Files -->
+         <script src="assets/plugins/angular/js/angular.js"></script>
+
+
+
+         <script src="assets/plugins/angular/js/angular-route.js"></script>
+         <script src="assets/plugins/angular/js/angular-animate.js"></script>
+        <script type="text/javascript" src="assets/plugins/angular/js/angular-input-date.js"></script>
+        <script type="text/javascript" src="assets/plugins/angular/js/angular-datatables.min.js"></script>
+
+        <!-- Angular Config/Routes -->
+         <script src="app.js"></script>
+         <script src="route.js"></script>
+
+        <script src="assets/js/saveHtmlToPdf.js"></script>
+
+
+
+
+
+
+<style>
+/*
+@font-face
+{
+   font-family: Marathi;
+   src: url("assets/plugins/marathi_font/Marathi_Lekhani.eot");
+}
+*/
+/*
+@font-face
+{
+   font-family: Marathi;
+   src: url("assets/plugins/marathi_font/Marathi_Lekhani.ttf");
+}
+*/
+@font-face
+{
+   font-family: Marathi1;
+   src: url("assets/plugins/marathi_font/NotoSans-Regular.ttf");
+}
+
+body {
+   font-family: 'Marathi1', sans-serif;
+}  </style>
+
+
+
+
+    </head>
+    <body ng-app="myApp">
+        <div  class="wrapper">
+
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>शाळा व्यवस्थापन </h3>
+                    <strong>BS</strong>
+                </div>
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#/home">
+                            <i class="fa fa-university" aria-hidden="true"></i>
+                            शाळा व्यवस्थापन
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i>
+                            प्रोफाइल
+                        </a>
+                    <li>
+                        <a href="#/student">
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            विद्यार्थी
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/teacher">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            शिक्षक
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-clipboard " aria-hidden="true"></i>
+                            परीक्षा तपशील
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            आमंत्रण पत्रिका
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-building" aria-hidden="true"></i>
+                            शाळा व्यवस्थापन समिती
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-cutlery" aria-hidden="true"></i>
+                            शालेय पोषण आहार
+                        </a>
+                    </li>
+                    <li>
+                          <a href="index.html">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            Logout
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div class="container " id="content">
+                <nav>
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                        <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <i class="glyphicon glyphicon-align-right"></i>
+                        </button> -->
+                            <button type="button" id="sidebarCollapse" class="btn btn-success navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+
+                            </ul>
+                            <!--  <ul class="nav navbar-nav navbar-right">
+                                <li><a ng-show="!main.isLoggedIn"  href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                                <li><a ng-show="!main.isLoggedIn"  href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+                                <li ng-show="main.isLoggedIn" class="dropdown">
+                                    <a  class="dropdown-toggle" data-toggle="dropdown" href="#">Account <img class="img-circle" src="assets/images/profile.jpg" alt="Profile" style="width:25px"> <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/profile">Profile</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a class="nav-link disabled" href="#" ng-click="main.logout();">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </nav>
+
+                <div ng-view class="ng-scope"></div>
+
+                </div>
+
+
+            </div>
+
+
+         <script type="text/javascript">
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
+            });
+        </script>
+    </body>
+</html>

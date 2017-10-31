@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>शाळा</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/angular/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+    </head>
+
+    <body ng-app="mainApp">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+<!--              <a class="navbar-brand" href="#">Cyber Code Consolidate</a>-->
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+<!--
+              <ul class="nav navbar-nav">
+                <li ><a href="/">Home</a></li>
+
+                <li><a href="/aboutUs">About Us</a></li>
+              </ul>
+-->
+              <ul class="nav navbar-nav navbar-right">
+                <li><a  href="#/register"><span class="fa fa-user"></span> नोंदणी करा</a></li>
+                <li><a class="active"  href="#/login"><span class="fa fa-sign-in"></span> लॉगइन</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+     <!--  -->
+
+     <!--<div class="row" style="position: fixed; top: 20%;">-->
+<div class="center-block">
+    <div class="col-sm-4 col-sm-offset-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">लॉग इन</div>
+            <form class=" panel-body" name="loginForm">
+
+                <!-- school-ID -->
+                <div class="form-group">
+                    <div class="form-group">
+                        <label>स्कूल आईडी:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-id-badge" aria-hidden="true"></i></span>
+                            <input class="form-control" type="text"  placeholder="Please enter school-id" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Password -->
+
+                <div class="form-group">
+                    <div class="form-group">
+                        <label>पासवर्ड:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+                            <input class="form-control" type="password" name="password" placeholder="Please enter password"  >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                       <a href="dashboard.html" class="btn btn-primary" type="submit">लॉगइन</a>
+                    </div>
+                </div>
+
+                <p class="message">नोंदणीकृत नाही? <a href="#/register">नोंदणी करा</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+     <!--  -->
+
+
+        <!-- Main Angular Files -->
+        <script src="assets/plugins/angular/js/angular.js"></script>
+        <script src="assets/plugins/angular/js/angular-route.js"></script>
+        <script src="assets/plugins/angular/js/angular-animate.js"></script>
+
+        <!-- Angular Config/Routes -->
+        <script src="main.js"></script>
+
+        <!-- JS link -->
+        <script src="assets/plugins/jquery/jquery.min.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,814 @@
+<div class="row container-fluid powderblue marathi" ng-controller="studentController">
+    <div class="col-sm-11" style="margin-left: 40px;" >
+        <div class="content-wrapper"  >
+            <div class="everyone-wrapper" >
+                <section ng-switch on="(editIndex == $index)" ng-repeat="person in studentArray track by $index" class="clearfix">
+                    <div class="info-wrapper clearfix">
+                        <div class="row" style="padding-top: 5px;">
+                            <div class="edit-wrapper clearfix">
+                                <div class="pull-left">
+                                    <span>विद्यार्थी परिचय:</span>
+                                    <button class="btn btn-warning" id="edit"  ng-switch-default ng-click="editingPerson($index)">  <span class="glyphicon glyphicon-edit" ></span>Edit</button>
+                                    <button class="btn btn-warning" ng-switch-when="true" ng-click="saveEdit($index)">save</button>
+                                    <button class="btn btn-danger" ng-switch-when="true" ng-click="cancelEdit()">X</button>
+                                </div>
+
+                                <div class="pull-right" >
+                                    <a class="btn btn-warning" ng-switch-default  pdf-save-button="idOne" pdf-name="someone.pdf" class="btn">Print</a>
+                                    <a href="#/studentTC"  class="btn btn-success">
+                                        <i class="fa fa-print"> टी.सी.</i>
+                                    </a>
+                                    <a href="#/studentBonafied" class="btn btn-success">
+                                        <i class="fa fa-print"> बोनफिड</i>
+                                    </a>
+                                    <a class="btn btn-success">
+                                        <i class="fa fa-print"> इतर</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="panel panel-default container-fluid" pdf-save-content="idOne">
+                            <div class="panel-heading ">
+                                <div class="row">
+                                    <div class="col-sm-2 text-center">
+                                        <img src="assets/images/zp_logo.JPG" style="width:100px;height:100px;">
+                                    </div>
+
+                                    <div class="col-sm-8">
+                                        <h3 class="text-center">महाराष्ट्र शिक्षण मंडळ </h3>
+                                        <h4 class="text-center">जिल्हा परिषद शाळा शिवनी कोतल </h4>
+                                        <h5 class="text-center">पुला जवळ </h5>
+                                    </div>
+                                    <div class="col-sm-2 pull-right">
+                                        <span>Reg no:-</span><span>००००१</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+                                <br>
+                                <div ng-switch-default >
+                                    <div class="row container-fluid">
+                                        <legend>वैयक्तिक माहिती<span class="pull-right">TC NO:-१२३</span></legend>
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <!-- Student ID -->
+
+                                                    <div class="form-group" >
+                                                        <label>विद्यार्थी अनुक्रमांक:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.studentId}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                <!-- Adhaar Card No: -->
+
+                                                    <div class="form-group" >
+                                                        <label>आधार क्रमांक:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.adhaarNumber}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <!-- First Name -->
+
+                                                    <div class="form-group">
+                                                        <label>नाव:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.firstName}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <!-- Middle Name -->
+
+                                                    <div class="form-group">
+                                                        <label>वडिलांचे नाव:</label>
+
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.middleName}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <!-- Last Name -->
+
+                                                    <div class="form-group">
+                                                        <label>आडनाव:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.lastName}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <!-- D.O.B: -->
+
+                                                    <div class="form-group">
+                                                        <label>जन्म तारीख:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.birth}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Gender: -->
+
+                                                    <div class="form-group">
+                                                        <label>लिंग:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.gender}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- Mothers Name: -->
+
+                                                    <div class="form-group">
+                                                        <label>आईचे नाव:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.mothersName}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Mother-Tongue: -->
+
+                                                    <div class="form-group">
+                                                        <label>मातृभाषा: </label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.motherTongue}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- Cast: -->
+
+                                                    <div class="form-group">
+                                                        <label>जात:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.cast}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Sub-cast: -->
+
+                                                    <div class="form-group">
+                                                        <label>उप जात:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.subCast}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- Religion: -->
+
+                                                    <div class="form-group">
+                                                        <label>धर्म:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.religion}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Birth Place: -->
+
+                                                    <div class="form-group">
+                                                        <label>जन्मस्थान:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.birthPlace}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row container-fluid">
+                                        <legend>प्रवेश माहिती</legend>
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- Year of admission: -->
+
+                                                    <div class="form-group">
+                                                        <label>प्रवेष दिनांक:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.yearOfAdmission}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Previous School: -->
+
+                                                    <div class="form-group">
+                                                        <label>पूर्वीच्या शाळेचे नाव: </label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.previousSchool}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- Performance: -->
+
+                                                    <div class="form-group">
+                                                        <label>अभ्यासातील प्रगती:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.performance}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Behavior: -->
+
+                                                    <div class="form-group">
+                                                        <label>वर्तणूक:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.behavior}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- School Leaving Date: -->
+
+                                                    <div class="form-group">
+                                                        <label>शाळा सोडल्याचा दिनांक:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.leavingDate}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Last Class: -->
+
+                                                    <div class="form-group">
+                                                        <label>कोणत्या वर्गात शिकत होता व केव्हा पासून:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.lastClass}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- School Leaving Reason: -->
+
+                                                    <div class="form-group">
+                                                        <label>शाळा सोडल्याचा कारण:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.reasonToLeave}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Grade: -->
+
+                                                    <div class="form-group">
+                                                        <label>शेरा:</label>
+                                                        <span class="span-group-addon"></span>
+                                                        <span type="text"> {{person.remark}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+<!--
+                                    <div class="row container-fluid">
+                                        <legend>संपर्क माहिती</legend>
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+-->
+                                                    <!-- Email -->
+
+<!--
+                                                    <div class="form-group">
+                                                        <label>ईमेल:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.emailId}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+-->
+                                                    <!-- Contact Number -->
+
+<!--
+                                                    <div class="form-group">
+                                                        <label>संपर्क:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.contactNo}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+-->
+                                                    <!-- city(District)-->
+<!--
+
+                                                    <div class="form-group">
+                                                        <label for="sel1">शहर(जिल्हा:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.cityDistrict}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-sm-6">
+-->
+                                                    <!-- Taluka -->
+
+<!--
+                                                    <div class="form-group">
+                                                        <label for="sel1">तालुका:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.taluka}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+-->
+                                                    <!-- Location -->
+<!--
+
+                                                    <div class="form-group">
+                                                        <label for="sel1">राहण्याचे ठिकाण:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.location}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+-->
+                                                    <!-- Pincode -->
+<!--
+
+                                                    <div class="form-group">
+                                                        <label>पिन कोड:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.pinCode}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+-->
+                                </div>
+
+                                <div ng-switch-when="true">
+                                    <div class="row container-fluid">
+                                        <legend>वैयक्तिक माहिती<span class="pull-right">TC NO:-१२३</span></legend>
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <!-- Student ID -->
+
+                                                    <div class="form-group" >
+                                                        <label>विद्यार्थी अनुक्रमांक:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.studentId}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <!-- Adhaar Card No: -->
+
+                                                    <div class="form-group" >
+                                                        <label>आधार क्रमांक:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.adhaarNumber}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <!-- First Name -->
+
+                                                    <div class="form-group">
+                                                        <label>नाव:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.firstName}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <!-- Middle Name -->
+
+                                                    <div class="form-group">
+                                                        <label>वडिलांचे नाव:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.middleName}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <!-- Last Name -->
+
+                                                    <div class="form-group">
+                                                        <label>आडनाव:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.lastName}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <!-- D.O.B: -->
+
+                                                    <div class="form-group">
+                                                        <label>जन्म तारीख:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.birth}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Gender:  -->
+
+                                                    <div class="form-group">
+                                                        <label>लिंग:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.gender}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- Mothers Name: -->
+
+                                                    <div class="form-group">
+                                                        <label>आईचे नाव:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.mothersName}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Mother-Tongue: -->
+
+                                                    <div class="form-group">
+                                                        <label>मातृभाषा: </label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.motherTongue}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- Cast: -->
+
+                                                    <div class="form-group">
+                                                        <label>जात:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.cast}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Sub-cast:   -->
+
+                                                    <div class="form-group">
+                                                        <label>उप जात:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.subCast}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- Religion: -->
+
+                                                    <div class="form-group">
+                                                        <label>धर्म:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <span type="text"> {{person.religion}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Birth Place:   -->
+
+                                                    <div class="form-group">
+                                                        <label>जन्मस्थान:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <span type="text"> {{person.birthPlace}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row container-fluid">
+                                        <legend>प्रवेश माहिती</legend>
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- Year of admission: -->
+
+                                                    <div class="form-group">
+                                                        <label>प्रवेष दिनांक:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <input class="form-control" type="text" ng-model="editObject.yearOfAdmission" placeholder="प्रवेष दिनांक">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Previous School: -->
+
+                                                    <div class="form-group">
+                                                        <label>पूर्वीच्या शाळेचे नाव: </label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <input class="form-control" type="text" ng-model="editObject.previousSchool" placeholder="पूर्वीच्या शाळेचे नाव">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- Performance: -->
+
+                                                    <div class="form-group">
+                                                        <label>अभ्यासातील प्रगती:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <input class="form-control" type="text" ng-model="editObject.performance" placeholder="अभ्यासातील प्रगती">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Behavior: -->
+
+                                                    <div class="form-group">
+                                                        <label>वर्तणूक:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <input class="form-control" type="text" ng-model="editObject.behavior" placeholder="वर्तणूक">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- School Leaving Date: -->
+
+                                                    <div class="form-group">
+                                                        <label>शाळा सोडल्याचा दिनांक:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <input class="form-control" type="text" ng-model="editObject.leavingDate" placeholder="शाळा सोडल्याचा दिनांक">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Last Class: -->
+
+                                                    <div class="form-group">
+                                                        <label>कोणत्या वर्गात शिकत होता व केव्हा पासून:</label>
+                                                        <div class="span-group">
+                                                            <span class="p-group-addon"></span>
+                                                            <input class="form-control" type="text" ng-model="editObject.lastClass" placeholder="कोणत्या वर्गात शिकत होता व केव्हा पासून">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+                                                    <!-- School Leaving Reason: -->
+
+                                                    <div class="form-group">
+                                                        <label>शाळा सोडल्याचा कारण:</label>
+                                                        <div class="span-group">
+                                                            <span class="span-group-addon"></span>
+                                                            <input class="form-control" type="text" ng-model="editObject.reasonToLeave" placeholder="शाळा सोडल्याचा कारण">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+                                                    <!-- Grade: -->
+
+                                                    <div class="form-group">
+                                                        <label>शेरा:</label>
+                                                        <span class="span-group-addon"></span>
+                                                        <input class="form-control" type="text" ng-model="editObject.remark" placeholder="शेरा">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+<!--
+                                    <div class="row container-fluid">
+                                        <legend>संपर्क माहिती</legend>
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <div class="row">
+                                                <div class="col-sm-6 ">
+-->
+                                                    <!-- Email -->
+<!--
+
+                                                    <div class="form-group">
+                                                        <label>ईमेल:</label>
+                                                        <span class="p-group-addon"></span>
+                                                        <input class="form-control" type="text" ng-model="editObject.emailId" placeholder="प्रवेष दिनांक">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 ">
+-->
+                                                    <!-- Contact Number -->
+<!--
+
+                                                    <div class="form-group">
+                                                        <label>संपर्क:</label>
+                                                        <span class="span-group-addon"></span>
+                                                        <input class="form-control" type="text" ng-model="editObject.contactNo" placeholder="प्रवेष दिनांक" >
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+-->
+                                                    <!-- city(District)-->
+<!--
+
+                                                    <div class="form-group">
+                                                        <label for="sel1">शहर(जिल्हा):</label>
+                                                        <span class="span-group-addon"></span>
+                                                        <input class="form-control" type="text" ng-model="editObject.cityDistrict" placeholder="प्रवेष दिनांक">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+-->
+                                                    <!-- Taluka -->
+
+<!--
+                                                    <div class="form-group">
+                                                        <label for="sel1">तालुका:</label>
+                                                        <span class="span-group-addon"></span>
+                                                        <input class="form-control" type="text" ng-model="editObject.taluka" placeholder="प्रवेष दिनांक" >
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+-->
+                                                    <!-- Location -->
+
+<!--
+                                                    <div class="form-group">
+                                                        <label for="sel1">राहण्याचे ठिकाण:</label>
+                                                        <span class="span-group-addon"></span>
+                                                        <input class="form-control" type="text" ng-model="editObject.location" placeholder="प्रवेष दिनांक" >
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+-->
+                                                    <!-- Pincode -->
+
+<!--
+                                                    <div class="form-group">
+                                                        <label>पिन कोड:</label>
+                                                        <span class="span-group-addon"></span>
+                                                        <input class="form-control" type="text" ng-model="editObject.pinCode" placeholder="प्रवेष दिनांक" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
